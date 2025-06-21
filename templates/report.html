@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EDA Report</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #1f1c2c, #928dab);
+            color: #ffffff;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .container {
+            margin-top: 60px;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+        }
+
+        h3 {
+            font-weight: bold;
+            text-shadow: 1px 1px 3px #000;
+            color: #00ffb3;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: none;
+            border-radius: 10px;
+            color: #ffffff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        pre {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        .btn-primary {
+            background-color: #00c9a7;
+            border: none;
+            padding: 10px 25px;
+            font-size: 1rem;
+            border-radius: 8px;
+        }
+
+        .btn-primary:hover {
+            background-color: #00b39f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>📊 EDA Report</h3>
+
+        <!-- Statistical Summary Section -->
+        <div class="card p-3 mb-4">
+            <h5>📈 Statistical Summary</h5>
+            <pre>{{ stats }}</pre>
+        </div>
+
+        <!-- EDA Visuals and Tables -->
+        {% for eda_html in eda_html_list %}
+        <div class="card p-3 mb-4">
+            {{ eda_html|safe }}
+        </div>
+        {% endfor %}
+
+        <!-- Navigation Button -->
+        <div class="text-center mt-3">
+            <a href="/" class="btn btn-primary">⬅️ Back</a>
+        </div>
+    </div>
+</body>
+</html>

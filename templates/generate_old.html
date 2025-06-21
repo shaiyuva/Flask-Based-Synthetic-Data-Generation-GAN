@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Synthetic Data</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+<div class="container mt-4">
+    <h2 class="mb-4 text-center">Uploaded Dataset</h2>
+    <div class="table-responsive">
+        {{ table | safe }}
+    </div>
+    <h2 class="mt-5">Generate Synthetic Data</h2>
+    <form action="/generate/ctgan" method="post" class="d-inline">
+        <input type="hidden" name="filename" value="{{ filename }}">
+        <button class="btn btn-primary">Generate with CTGAN</button>
+    </form>
+    <form action="/generate/custom" method="post" class="d-inline">
+        <input type="hidden" name="filename" value="{{ filename }}">
+        <button class="btn btn-success">Generate with Custom GAN</button>
+    </form>
+</div>
+</body>
+</html>

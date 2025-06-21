@@ -1,0 +1,81 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f9f9f9;
+    margin: 0;
+}
+
+/* Header Section */
+header {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 1.25rem;
+    margin-top: 10px;
+}
+
+/* Main Content */
+.container {
+    margin-top: 30px;
+}
+
+.card {
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 25px;
+}
+
+.card-body .btn {
+    padding: 10px;
+    font-size: 1.25rem;
+}
+
+/* Button Styles */
+.btn-lg {
+    background-color: #5cb85c;
+    border: none;
+}
+
+.btn-lg:hover {
+    background-color: #4cae4c;
+}
+
+.btn-info {
+    background-color: #5bc0de;
+    border: none;
+}
+
+.btn-info:hover {
+    background-color: #31b0d5;
+}
+
+/* Footer Section */
+footer {
+    background-color: #343a40;
+    color: white;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+/* Form Field Styles */
+input[type="file"] {
+    border-radius: 10px;
+}
+
+label {
+    font-size: 1.1rem;
+    color: #333;
+}
